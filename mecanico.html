@@ -24,10 +24,93 @@
 
     <!-- Aqui va el navbar -->
     <header>
-
+        <nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark">
+            <div class="container-fluid">
+                <img src="img\images.png" alt="" width="60" height="60" style="border-radius: 50px 50px;">
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarScroll">
+                <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Nuestros Trabajos</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Agendar Reserva
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                        
+                      <li><a class="dropdown-item" href="#"><i class="fas fa-cog"></i> Manteción General</a></li>
+                      <li><a class="dropdown-item" href="#"><i class="fas fa-oil-can"></i>Cambio de Aceite</a></li>
+                      <li><a class="dropdown-item" href="#"><i class="fas fa-dharmachakra"></i>Cambio de Neumáticos</a></li>
+                      <li><a class="dropdown-item" href="#"><i class="fas fa-balance-scale-right"></i>Balanceo</a></li>
+                      <li><a class="dropdown-item" href="#"><i class="fas fa-dharmachakra"></i>Alineación</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="#"><i class="fab fa-searchengin"></i>Revisión Técnica</a></li>
+                    </ul>
+                  </li>
+                </ul>
+                <form class="d-flex">
+                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+              </div>
+            </div>
+          </nav>
     </header>
+<!--Formulary-->
+    <div class="container">
+        <h1 class="tituloform text-center">Formulario Mecanico</h1>
+        <p class="text-center">Here create a fomulary for your service atention</p>
+        <div class="row g-3 align-item-center">
+            <div class="col">
+                <input type="text" class="form-control" placeholder="First name" aria-label="First name">
+              </div>
+              <div class="col">
+                <input type="text" class="form-control" placeholder="Last name" aria-label="Last name">
+              </div>
+            <div class="col-12">
+                <label for="username">Username</label>
+                <div class="input-group has-validation">
+                    <span class="input-group-text">@</span>
+                    <input type="text" class="form-control" id="username"
+                    placeholder="Username" required>
+                </div>
+            </div>
+            <div class="col-12">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email"
+                placeholder="you@example.com">
+            </div>
+            <div class="col-12">
+                <label for="email" class="form-label"></label>
 
-
+                <input type="email" class="form-control" id="email"
+                placeholder="you@example.com">
+            </div>
+            <div class="col-12">
+                <label for="email" class="form-label"></label>
+                <input type="email" class="form-control" id="email"
+                placeholder="you@example.com">
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+              </div>
+              <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+              </div>
+              <div class="mb-3">
+                <label for="formFileMultiple" class="form-label">Multiple files input example</label>
+                <input class="form-control" type="file" id="formFileMultiple" multiple>
+              </div>
+        </div>
+    </div>
 
 
 
