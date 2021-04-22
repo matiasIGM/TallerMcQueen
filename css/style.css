@@ -1,0 +1,19 @@
+.ml2 {
+    font-weight: 900;
+    font-size: 3.5em;
+  }
+  
+  .ml2 .letter {
+    display: inline-block;
+    line-height: 1em;
+  }
+
+.background_container{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: rgba(184, 19, 19, 0.7);
+    z-index: 10;
+}
