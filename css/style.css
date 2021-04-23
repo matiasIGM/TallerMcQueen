@@ -11,3 +11,11 @@
     top: 40%;
   }
 
+  section {
+    background-color: rgb(235,235,0);
+  }
+
+  .imagenes-mecanicos{
+    height: 250px;
+  }
+  
