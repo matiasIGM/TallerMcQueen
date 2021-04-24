@@ -12,8 +12,17 @@
   }
 
   section {
-    background-color: rgb(235,235,0);
+    background-color:rgb(0, 0, 0);
+    padding: 100px;
   }
+
+  .titulo-mecanico{
+   padding-bottom: 70px;
+   text-shadow: 2px 2px gray;
+   text-decoration: underline;
+  
+  }
+  
 
   .imagenes-mecanicos{
     height: 250px;
