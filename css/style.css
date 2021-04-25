@@ -11,14 +11,14 @@
 
 
 
-body{
+/* body{
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 17px;
   color: black;
   line-height: 1.6;
   height: 100%;
-}
+} */
 
 .fondo_landing{
   min-height: 100%;
@@ -162,7 +162,7 @@ body{
 
 /*----estilos seccion mecanicos---*/
 
-.section {
+.sections {
   background-color:rgb(0, 0, 0);
   padding: 100px;
 }
@@ -182,14 +182,16 @@ body{
   border-right: 1px solid white ;
 }
 
+/*----estilos seccion nosotros---*/
+
 #seccion-nosotros .contenedor{
   margin: 20px 0 20px 0;
-  padding-top: 10px;
+  padding-top: 90px;
   padding-left: 100px;
   padding-right: 100px;
   height: 50vh;
   text-align: center;
-  z-index: 12;
+  
 }
 
 .titulo-nosotros{
@@ -198,9 +200,8 @@ body{
 }
 
 .parrafo-nosotros{
-  padding-left: 70px;
-  padding-right: 70px;
+  
   color: white;
-  font-size:xx-large;
+  font-size:medium;
 }
 
