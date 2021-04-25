@@ -6,30 +6,33 @@
     text-align: center;
   }
   
-  .contenedor-modal button {
-    position: relative;
-    top: 40%;
-  }
+.contenedor-modal button {
+  position: relative;
+  top: 40%;
+}
 
+section {
+  background-color:rgb(0, 0, 0);
+  padding: 100px;
+}
+
+.titulo-mecanico{
+  padding-bottom: 70px;
+  text-shadow: 2px 2px gray;
+  text-decoration: underline;
+
+}
+
+.imagenes-mecanicos{
+  height: 250px;
+}
+    
 .separador{
   border-right: 1px solid white ;
 }
 
-.footer h4{
-  color: white;
-}
-
-.footer-ribbon{
-  color: blue;
-  position: relative;
-  width: 100%;
-  height: 40px;
-}
-
-
 #seccion-nosotros .contenedor{
-  background-color: blue;
-  margin: 50px 0 50px 0;
+  margin: 20px 0 20px 0;
   padding-top: 150px;
   padding-left: 100px;
   padding-right: 100px;
