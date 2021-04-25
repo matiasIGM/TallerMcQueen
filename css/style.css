@@ -169,3 +169,50 @@ body{
     margin-top: 7rem;
   }
 }
+
+
+
+/*----estilos seccion mecanicos---*/
+
+.section {
+  background-color:rgb(0, 0, 0);
+  padding: 100px;
+}
+
+.titulo-mecanico{
+  padding-bottom: 70px;
+  text-shadow: 2px 2px gray;
+  text-decoration: underline;
+
+}
+
+.imagenes-mecanicos{
+  height: 250px;
+}
+    
+.separador{
+  border-right: 1px solid white ;
+}
+
+#seccion-nosotros .contenedor{
+  margin: 20px 0 20px 0;
+  padding-top: 10px;
+  padding-left: 100px;
+  padding-right: 100px;
+  height: 50vh;
+  text-align: center;
+  z-index: 12;
+}
+
+.titulo-nosotros{
+  color: white;
+  font-size: 50px;
+}
+
+.parrafo-nosotros{
+  padding-left: 70px;
+  padding-right: 70px;
+  color: white;
+  font-size:xx-large;
+}
+
