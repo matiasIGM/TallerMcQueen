@@ -1,36 +1,24 @@
 
-.contenedor-modal {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-  }
-  
-  .contenedor-modal button {
-    position: relative;
-    top: 40%;
-  }
-
 /* ESTILOS GLOBALES
 -------------------------------------------------- */
 /* Padding below the footer and lighter body text */
 
-body {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-  color: #5a5a5a;
-}
+/* body {
+  /* padding-top: 3rem;
+  padding-bottom: 3rem; */
+  
+/* } */
 
 
 
-body{
+/* body{
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 17px;
   color: black;
   line-height: 1.6;
   height: 100%;
-}
+} */
 
 .fondo_landing{
   min-height: 100%;
@@ -169,3 +157,51 @@ body{
     margin-top: 7rem;
   }
 }
+
+
+
+/*----estilos seccion mecanicos---*/
+
+.sections {
+  background-color:rgb(0, 0, 0);
+  padding: 100px;
+}
+
+.titulo-mecanico{
+  padding-bottom: 70px;
+  text-shadow: 2px 2px gray;
+  text-decoration: underline;
+
+}
+
+.imagenes-mecanicos{
+  height: 250px;
+}
+    
+.separador{
+  border-right: 1px solid white ;
+}
+
+/*----estilos seccion nosotros---*/
+
+#seccion-nosotros .contenedor{
+  margin: 20px 0 20px 0;
+  padding-top: 90px;
+  padding-left: 100px;
+  padding-right: 100px;
+  height: 50vh;
+  text-align: center;
+  
+}
+
+.titulo-nosotros{
+  color: white;
+  font-size: 50px;
+}
+
+.parrafo-nosotros{
+  
+  color: white;
+  font-size:medium;
+}
+
