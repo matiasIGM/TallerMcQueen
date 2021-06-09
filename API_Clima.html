@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+    <!--Script cdn Jquery-->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <title>Clima</title>
+
+</head>
+
+<body>
+    <!--Script para Clima McQueen-->
+    <script>
+        $(document).ready(function () {
+            $("#msg").hide();
+            $("#msg2").hide();
+            $("#msg3").hide();
+
+            var urlBase = "www.metaweather.com/api/location/search/?lattlong=";
+            // const key = '391995802c1a28da41a162239d50ea32';
+            $("#PedirClima").click(function () {
+
+                if (navigator.geolocation) {
+                    navigator.geolocation.getCurrentPosition(showPosition);
+                } else {
+                    $("msg2").append("Geolocation is not supported by this browser");
+                    $("msg2").show();
+
+                }
+
+                function showPosition(position) {
+                    var lat = position.coords.latitude;
+                    var lon = position.coords.longitude;
+
+                    $("#MensajeLatLon").remove();
+                    $("#msg").append(`<div id="mensajeLatLon">Latitude: ${position.coords.latitude} <br> Longitude: ${position.coords.longitude}</div>`);
+                    $("#msg").show();
+
+
+                    var urlLocation = `${urlBase}${lat},${lon}`;
+
+                    // debugger 
+                    $.get("urlLocation",function(data){
+                        var woe = data.woeid;
+                    });
+                    // var woe = $.get(urlLocation, data.woeid);
+                    // debugger
+                }
+
+                // $.ajax({
+                //     url: 'api.openweathermap.org/data/2.5/weather',
+                //     type: 'GET',
+                //     data: {
+                //         appid: '391995802c1a28da41a162239d50ea32',
+                //         units: 'metric'
+                //     }
+                // })
+
+            })
+        })
+    </script>
+
+    <div class="container">
+        <h1>Informacion del clima</h1>
+        <button type="button" id="PedirClima" class="btn btn-primary mb-3">Pedir Ubicacion</button>
+        <div class="alert alert-primary" role="alert" id="msg"></div>
+        <div class="alert alert-primary" role="alert" id="msg2"></div>
+        <div class="alert alert-warning" role="alert" id="msg3"></div> 
+    </div>
+
+    <!--Bundle Bootstrap-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script> 
+</body>
+
+</html>
