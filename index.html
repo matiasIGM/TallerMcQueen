@@ -537,6 +537,52 @@
   </section>
   <!--Fin Cards-->
 
+
+  <section>
+    
+    <div class="container" style="height: 100vh;">
+      <div class="row">
+        <h1>Traer datos desde API</h1>
+      </div>
+  
+      <div class="container">
+        <form class="row g-2">
+          <div class="col-2">
+            <button type="button" class="btn btn-warning" id="enviar">Buscar</button>
+          </div>
+          <div class="col-2">
+            <input type="number" min="955" max="5000" class="form-control mb-2" id="NumMan">
+          </div>
+  
+  
+        </form>
+  
+      </div>
+  
+
+
+
+
+    <div class="row">
+      <table class="table table-dark table-borderless" id="manufacturadores">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Nombre Comercial</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Pais</th>
+            <th scope="col">Correo</th>
+
+          </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+      </table>
+    </div>
+
+  </section>
+
   <!--footer-->
   <footer>
     <div class="footer bg-dark">
@@ -606,6 +652,41 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
   <!-- Script  Libreria Local -->
   <script src="js\general.js"></script>
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+
+
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+  <script>
+
+    $(document).ready(function () {
+
+      $("#enviar").click(function () {
+        var NumMan = $("#NumMan").val();
+        var url = 'https://vpic.nhtsa.dot.gov/api/vehicles/getmanufacturerdetails/' + NumMan + '?format=json';
+
+        $.get(url, function (data) {
+          console.log(NumMan);
+          console.log(url)
+          console.log(data.Results[0].Mfr_ID);
+          console.log(data.Results[0].Mfr_Name);
+          console.log(data.Results[0].Mfr_CommonName);
+          console.log(data.Results[0].Country);
+          console.log(data.Results[0].ContactEmail);
+
+          $("#manufacturadores").append('<tr> <td>' + data.Results[0].Mfr_ID + '</td> <td>' + data.Results[0].Mfr_Name + '</td> <td>' + data.Results[0].Mfr_CommonName + '</td> <td>' + data.Results[0].Country + '</td> <td>' + data.Results[0].ContactEmail + '</td> </tr>')
+
+
+
+
+
+        })
+      })
+    })
+
+  </script>
 
 </body>
 
